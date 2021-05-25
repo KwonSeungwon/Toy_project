@@ -1,16 +1,23 @@
 package com.example.toy.controller;
 
 
-import org.springframework.stereotype.Controller;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
+@ComponentScan("{com.example.toy.controller}")
 public class BaseController {
 
 
     @GetMapping("/")
     public String home() {
-        return "Hello";
+        return "intro";
+    }
+
+    @GetMapping("/intro")
+    public String introPage() {
+        return "intro";
     }
 
 
