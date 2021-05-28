@@ -15,7 +15,7 @@ public class BaseController {
     @GetMapping("/")
     public String home() {
         System.out.println("hello world");
-        return "home";
+        return "home.html";
     }
 
     @RequestMapping("/intro")
