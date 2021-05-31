@@ -23,5 +23,10 @@ public class BaseController {
         return "intro";
     }
 
+    @GetMapping("/api/v1/move")
+    public String movePage() {
+        System.out.println("test");
+        return "board";
+    }
 
 }
