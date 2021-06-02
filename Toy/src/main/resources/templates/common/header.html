@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="Kr">
+<head>
+</head>
 <body>
     <header>
-        <div class="jumbotron text-center test" style="margin-bottom:0; background-image: url('img/incheon_img.jpg')">
-            <h1>재테크 부동산</h1>
-            <p>공장 * 매매 및 임대 * 경매 * 개발 컨설팅</p>
-        </div>
-        <nav id="container" class="navbar navbar-expand-sm bg-dark navbar-dark" style="background-color: green !important;">
+        <nav id="container" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" style="background-color: #291e6c !important;">
             <a class="navbar-brand" href="#">홈페이지</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -14,7 +12,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/api/v1/move" title="페이지이동">게시판</a>
+                        <a class="nav-link" href="V/api/v1/move" title="페이지이동">게시판</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" title="페이지이동">게시판2</a>
@@ -22,11 +20,20 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" title="페이지이동">게시판3</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" title="페이지이동">게시판4</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">추가메뉴</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
                     </li>
                 </ul>
             </div>
+            <form class="form-inline" action="/action_page.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="게시글 검색">
+                <button class="btn btn-success" type="button">Search</button>
+            </form>
         </nav>
     </header>
 </body>
